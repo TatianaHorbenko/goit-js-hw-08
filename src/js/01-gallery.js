@@ -31,3 +31,7 @@ let gallery = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
+
+
+
+
