@@ -32,12 +32,14 @@ function onFormSubmit(event) {
   event.preventDefault();
 
   const formDataToSend = new FormData(event.currentTarget);
+if (!formData.email||!formData.message)
+return alert ("Всі поля обов'язкові");
+
   formDataToSend.forEach((value, name) => {
-    formData[name] = value;
+ console.log((formData[name] = value));
   });
 
   event.currentTarget.reset();
   localStorage.removeItem(storageKey);
-
   
 }
